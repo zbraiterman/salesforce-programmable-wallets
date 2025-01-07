@@ -16,8 +16,7 @@ The initial Setup App and Screen is built. It allows you to connect to the Progr
 
 This Open Source project requires you to register a developer key. This will be clarified in Milestone 3 as we prepare for final release. We are able to connect to the developer account. All "scaffolding is done."
 
-
-For an explanation of the screen, please view [Milestone 1 Explainer Video](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/milestone-1-setup.mp4)
+For an explanation of the screen, please view [Milestone 1 Explainer Video](https://youtu.be/XJlX5Affdg8)
 
 ## Ssalesforce DX Project Setup Information
 
