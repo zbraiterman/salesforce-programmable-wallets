@@ -6,6 +6,19 @@ Programmable Wallets for Salesforce, powered by Circle programmable wallets, is 
 
 Key management is abstracted as Developmer Managed Wallets, using Salesforce permissions to manage wallet safety. The company will be able to grant read, write, and execute permissions on the Web3 assets without leaving the environment they are comfortable with.
 
+## Status of Project
+
+### Milestone 1 - Setup Project
+
+The initial Setup App and Screen is built. It allows you to connect to the Programmable wallet system.
+
+![](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-setup.png)
+
+This Open Source project requires you to register a developer key. This will be clarified in Milestone 3 as we prepare for final release. We are able to connect to the developer account. All "scaffolding is done."
+
+![](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-setup.png)
+
+For an explanation of the screen, please view [Milestone 1 Explainer Video](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/milestone-1-setup.mp4)
 
 ## Ssalesforce DX Project Setup Information
 
