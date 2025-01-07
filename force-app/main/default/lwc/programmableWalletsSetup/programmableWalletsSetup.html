@@ -1,0 +1,300 @@
+<template>
+    <lightning-card hide-header label={labels.CORE.Container}>
+        <lightning-spinner lwc:if={isLoading}></lightning-spinner>
+        <div class="color slds-var-m-around_large">
+            <div class="slds-var-p-left_medium slds-var-p-right_medium">
+                <div class="slds-text-heading_large slds-var-p-bottom_medium">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_11-of-12">
+                            <img src={logo} class="logo" />
+                            <b>{labels.CORE.Header_1}</b>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+                            <lightning-icon
+                                class="reset"
+                                icon-name="utility:record_delete"
+                                size="small"
+                                onclick={handleRemoveConfig}
+                            >
+                            </lightning-icon>
+                            <lightning-icon
+                                class="refresh"
+                                icon-name="utility:refresh"
+                                size="small"
+                                onclick={handleRefresh}
+                            >
+                            </lightning-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-text-heading_small slds-var-m-bottom_medium">
+                    <lightning-formatted-rich-text
+                        class="slds-var-p-right_xx-small"
+                        value={labels.CORE.Header_1_Info}
+                    >
+                    </lightning-formatted-rich-text>
+                </div>
+            </div>
+
+            <lightning-card
+                title={labels.CONFIG.Header}
+                icon-name="standard:sales_path"
+            >
+                <lightning-accordion
+                    allow-multiple-sections-open
+                    active-section-name={activeSections}
+                >
+                    <!-- Api Key -->
+                    <lightning-accordion-section
+                        name={steps.n1}
+                        label={labels.APIKEY.Sub_Header}
+                        class="slds-var-m-left_xx-large"
+                    >
+                        <div
+                            class="slds-var-p-left_large slds-var-m-top_medium"
+                        >
+                            <lightning-formatted-rich-text
+                                class="slds-var-p-right_xx-small"
+                                value={labels.APIKEY.Info}
+                            >
+                            </lightning-formatted-rich-text>
+                            <a href={circleApiKeyURL} target="_blank">
+                                {labels.APIKEY.Link}
+                            </a>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:if={apiKeyCompleted}
+                        >
+                            <lightning-icon
+                                icon-name="action:approval"
+                                size="x-small"
+                            ></lightning-icon>
+                            <lightning-formatted-rich-text
+                                value={labels.CORE.Success}
+                                class="slds-var-p-left_small slds-text-heading_small"
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:else
+                        >
+                            <div class="slds-col">
+                                <lightning-input
+                                    variant="label-inline"
+                                    type="text"
+                                    value={apiKey}
+                                    label={labels.APIKEY.Input}
+                                    onchange={handleApiKey}
+                                ></lightning-input>
+                                <lightning-button
+                                    variant="brand-outline"
+                                    label={labels.CORE.Save_Settings}
+                                    onclick={handleApiKeyStorage}
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </lightning-accordion-section>
+
+                    <!-- Entity Secret -->
+                    <lightning-accordion-section
+                        name={steps.n2}
+                        label={labels.ENTITY_SECRET.Sub_Header}
+                        class="slds-var-m-left_xx-large"
+                    >
+                        <div
+                            class="slds-var-p-left_large slds-var-m-top_medium"
+                        >
+                            <lightning-formatted-rich-text
+                                class="slds-var-p-right_xx-small"
+                                value={labels.ENTITY_SECRET.Info}
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:if={entitySecretCompleted}
+                        >
+                            <lightning-icon
+                                icon-name="action:approval"
+                                size="x-small"
+                            ></lightning-icon>
+                            <lightning-formatted-rich-text
+                                value={labels.CORE.Success}
+                                class="slds-var-p-left_small slds-text-heading_small"
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:else
+                        >
+                            <div class="slds-col">
+                                <lightning-button
+                                    variant="brand-outline"
+                                    label={labels.ENTITY_SECRET.Button}
+                                    onclick={handleEntitySecret}
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </lightning-accordion-section>
+
+                    <!-- Entity Public Key -->
+                    <lightning-accordion-section
+                        name={steps.n3}
+                        label={labels.ENTITY_PUBLIC_KEY.Sub_Header}
+                        class="slds-var-m-left_xx-large"
+                    >
+                        <div
+                            class="slds-var-p-left_large slds-var-m-top_medium"
+                        >
+                            <lightning-formatted-rich-text
+                                class="slds-var-p-right_xx-small"
+                                value={labels.ENTITY_PUBLIC_KEY.Info}
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:if={entityPublicKeyCompleted}
+                        >
+                            <lightning-icon
+                                icon-name="action:approval"
+                                size="x-small"
+                            ></lightning-icon>
+                            <lightning-formatted-rich-text
+                                value={labels.CORE.Success}
+                                class="slds-var-p-left_small slds-text-heading_small"
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:else
+                        >
+                            <div class="slds-col">
+                                <lightning-button
+                                    variant="brand-outline"
+                                    label={labels.ENTITY_PUBLIC_KEY.Button}
+                                    onclick={handlePublicEntityKey}
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </lightning-accordion-section>
+
+                    <!-- Entity Secret Ciphertext -->
+                    <lightning-accordion-section
+                        name={steps.n4}
+                        label={labels.ENTITY_SECRET_CIPHERTEXT.Sub_Header}
+                        class="slds-var-m-left_xx-large"
+                    >
+                        <div
+                            class="slds-var-p-left_large slds-var-m-top_medium"
+                        >
+                            <lightning-formatted-rich-text
+                                class="slds-var-p-right_xx-small"
+                                value={labels.ENTITY_SECRET_CIPHERTEXT.Info}
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:if={entitySecretCiphertextCompleted}
+                        >
+                            <lightning-icon
+                                icon-name="action:approval"
+                                size="x-small"
+                            ></lightning-icon>
+                            <lightning-formatted-rich-text
+                                value={labels.CORE.Success}
+                                class="slds-var-p-left_small slds-text-heading_small"
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:else
+                        >
+                            <div class="slds-col">
+                                <lightning-button
+                                    variant="brand-outline"
+                                    label={labels.ENTITY_SECRET_CIPHERTEXT.Button}
+                                    onclick={handleEncryption}
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            if:false={setupData.consoleRegistered}
+                        >
+                            <lightning-input-rich-text
+                                formats="code-block"
+                                value={setupData.entitySecretCiphertext}
+                                lwc:if={setupData.entitySecretCiphertext}
+                                disabled
+                            >
+                            </lightning-input-rich-text>
+                        </div>
+                    </lightning-accordion-section>
+
+                    <!-- Circle Web3 Services Console -->
+                    <lightning-accordion-section
+                        name={steps.n5}
+                        label={labels.WEB3_SERVICE_CONSOLE.Sub_Header}
+                        class="slds-var-m-left_xx-large"
+                    >
+                        <div
+                            class="slds-var-p-left_large slds-var-m-top_medium"
+                        >
+                            <lightning-formatted-rich-text
+                                class="slds-var-p-right_xx-small"
+                                value={labels.WEB3_SERVICE_CONSOLE.Info}
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:if={setupData.consoleRegistered}
+                        >
+                            <lightning-icon
+                                icon-name="action:approval"
+                                size="x-small"
+                            ></lightning-icon>
+                            <lightning-formatted-rich-text
+                                value={labels.CORE.Success}
+                                class="slds-var-p-left_small slds-text-heading_small"
+                            >
+                            </lightning-formatted-rich-text>
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            lwc:else
+                        >
+                            <div class="slds-col">
+                                <a
+                                    href={circleRegisteringURL}
+                                    class="slds-button slds-button_brand"
+                                    target="_blank"
+                                >
+                                    {labels.WEB3_SERVICE_CONSOLE.Button}
+                                </a>
+                                <lightning-button
+                                    variant="brand-outline"
+                                    label={labels.WEB3_SERVICE_CONSOLE.MarkComplete}
+                                    onclick={handleRegisterComplete}
+                                    class="slds-var-p-left_small"
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </lightning-accordion-section>
+                </lightning-accordion>
+            </lightning-card>
+        </div>
+    </lightning-card>
+</template>
