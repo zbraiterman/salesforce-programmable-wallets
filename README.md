@@ -4,7 +4,7 @@
 
 Programmable Wallets for Salesforce, powered by Circle programmable wallets, is an open source solution built on Circle Programmable Wallet technology to operating 100% within the Salesfore Ecosystem.
 
-Key management is abstracted as Developmer Managed Wallets, using Salesforce permissions to manage wallet safety. The company will be able to grant read, write, and execute permissions on the Web3 assets without leaving the environment they are comfortable with.
+Key management is abstracted as Developer Managed Wallets, using Salesforce permissions to manage wallet safety. The company will be able to grant read, write, and execute permissions on the Web3 assets without leaving the environment they are comfortable with.
 
 ## Status of Project
 
@@ -36,8 +36,8 @@ https://developer.salesforce.com/signup
 
 ## How To Test the App - Using Repository
 
-1. Fetch the repository
-1. Checkout the main branch
+1. Clone the repository.
+1. Checkout the main branch.
 1. Log into the Dev Hub Org by running
    `sf org login web --set-default-dev-hub --alias DevHub --instance-url https://login.salesforce.com`
    and entering your username and password.
