@@ -1,0 +1,38 @@
+<template>
+    <div class="slds-is-relative">
+        <lightning-spinner lwc:if={isLoading} size="medium"></lightning-spinner>
+        <lightning-modal-header>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-text-heading_large">
+                    <img src={logo} class="logo" />
+                    <span class="slds-var-p-left_medium"
+                        >{labels.CORE.Header}</span
+                    >
+                </div>
+            </div>
+        </lightning-modal-header>
+        <lightning-modal-body>
+            <lightning-record-edit-form object-api-name={objects.WALLET_SET}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field
+                    field-name={fields.NAME}
+                    onchange={handleFieldChange}
+                    required
+                >
+                </lightning-input-field>
+            </lightning-record-edit-form>
+        </lightning-modal-body>
+        <lightning-modal-footer>
+            <lightning-button
+                class="slds-var-p-right_medium"
+                label={labels.CORE.Close}
+                onclick={handleClose}
+            ></lightning-button>
+            <lightning-button
+                label={labels.CORE.Create}
+                disabled={isCreateDisabled}
+                onclick={handleCreateWalletSet}
+            ></lightning-button>
+        </lightning-modal-footer>
+    </div>
+</template>

@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>CircleService_CreateWalletSet_API_Error</fullName>
+        <categories>apex, CircleService</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CircleService CreateWalletSet API Error</shortDescription>
+        <value>Error creating the Wallet Set.</value>
+    </labels>
+    <labels>
+        <fullName>CircleService_CreateWallet_API_Error</fullName>
+        <categories>apex, CircleService</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CircleService CreateWallet API Error</shortDescription>
+        <value>Error creating the Wallet.</value>
+    </labels>
+    <labels>
+        <fullName>NewWalletSet_Close</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWalletSet Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>NewWalletSet_Create</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWalletSet Create</shortDescription>
+        <value>Create</value>
+    </labels>
+    <labels>
+        <fullName>NewWalletSet_Create_Success</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWalletSet Create Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>NewWalletSet_Create_Success_Message</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWalletSet Create Success Message</shortDescription>
+        <value>Your Wallet Set has been successfully created! Time to unlock new possibilities!</value>
+    </labels>
+    <labels>
+        <fullName>NewWalletSet_Header</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWalletSet Header</shortDescription>
+        <value>New Wallet Set</value>
+    </labels>
+    <labels>
+        <fullName>NewWalletSet_Wallet_Set_Name</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWalletSet Wallet Set Name</shortDescription>
+        <value>Wallet Set Name</value>
+    </labels>
+    <labels>
+        <fullName>NewWallet_Create_Success_Message</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWallet Create Success Message</shortDescription>
+        <value>Your Wallet has been successfully created! Unleash your potential—it&apos;s time to make magic happen!</value>
+    </labels>
+    <labels>
+        <fullName>NewWallet_Header</fullName>
+        <categories>lwc, NewWalletSet</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewWallet Header</shortDescription>
+        <value>New Wallet</value>
+    </labels>
+    <labels>
         <fullName>ProgrammableWalletsSetup_ApiKey_Header</fullName>
         <categories>lwc, ProgrammableWalletsSetup</categories>
         <language>en_US</language>
@@ -62,7 +142,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>ProgrammableWalletsSetup EntityPublicKey API Error</shortDescription>
-        <value>Error retrieveing the Entity Public Key</value>
+        <value>Error retrieveing the Entity Public Key.</value>
     </labels>
     <labels>
         <fullName>ProgrammableWalletsSetup_EntityPublicKey_Button</fullName>
@@ -97,6 +177,14 @@
         <value>Generate Entity Secret Ciphertext</value>
     </labels>
     <labels>
+        <fullName>ProgrammableWalletsSetup_EntitySecretCiphertext_Copy</fullName>
+        <categories>lwc, ProgrammableWalletsSetup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProgrammableWalletsSetup Entity Secret Ciphertext Copy</shortDescription>
+        <value>Entity Secret Ciphertext copied!</value>
+    </labels>
+    <labels>
         <fullName>ProgrammableWalletsSetup_EntitySecretCiphertext_Info</fullName>
         <categories>lwc, ProgrammableWalletsSetup</categories>
         <language>en_US</language>
@@ -119,6 +207,14 @@
         <protected>true</protected>
         <shortDescription>ProgrammableWalletsSetup Entity Secret Button</shortDescription>
         <value>Generate Entity Secret</value>
+    </labels>
+    <labels>
+        <fullName>ProgrammableWalletsSetup_EntitySecret_Copy</fullName>
+        <categories>lwc, ProgrammableWalletsSetup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProgrammableWalletsSetup Entity Secret Copy</shortDescription>
+        <value>Entity Secret Ciphertext copied!</value>
     </labels>
     <labels>
         <fullName>ProgrammableWalletsSetup_EntitySecret_Info</fullName>

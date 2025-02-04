@@ -229,16 +229,26 @@
                             </div>
                         </div>
                         <div
-                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium"
+                            class="slds-grid slds-wrap slds-var-p-left_large slds-var-p-top_medium slds-grid_align-spread"
                             if:false={setupData.consoleRegistered}
                         >
-                            <lightning-input-rich-text
-                                formats="code-block"
-                                value={setupData.entitySecretCiphertext}
-                                lwc:if={setupData.entitySecretCiphertext}
-                                disabled
-                            >
-                            </lightning-input-rich-text>
+                            <div class="slds-col slds-size_11-of-12">
+                                <lightning-input-rich-text
+                                    formats="code-block"
+                                    value={setupData.entitySecretCiphertext}
+                                    lwc:if={setupData.entitySecretCiphertext}
+                                    disabled
+                                >
+                                </lightning-input-rich-text>
+                            </div>
+                            <div class="slds-col">
+                                <lightning-icon
+                                    icon-name="utility:copy"
+                                    size="small"
+                                    onclick={handleCopyEntitySecretCiphertext}
+                                    lwc:if={entitySecretCiphertextCopyVisible}
+                                ></lightning-icon>
+                            </div>
                         </div>
                     </lightning-accordion-section>
 

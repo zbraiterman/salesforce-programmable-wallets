@@ -85,6 +85,26 @@ private with sharing class ProgrammableWalletsSetupCtrlTest {
     }
 
     @IsTest
+    static void generateEnityPublicKey_Error() {
+        // Setup
+        TestDataFactory.createSettings();
+        TestDataFactory.setEntityPublicKeyMock('new_public_key', 400);
+
+        // Exercise
+        Test.startTest();
+        Boolean isError = false;
+        try {
+            ProgrammableWalletsSetupCtrl.generateEnityPublicKey();
+        } catch (AuraHandledException excp) {
+            isError = true;
+        }
+        Test.stopTest();
+
+        // Verify
+        Assert.isTrue(isError);
+    }
+
+    @IsTest
     static void completeConsoleRegistered() {
         // Setup
         // No initial settings setup

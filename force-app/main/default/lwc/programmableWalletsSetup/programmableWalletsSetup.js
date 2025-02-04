@@ -14,6 +14,7 @@ import completeConsoleRegistered from '@salesforce/apex/ProgrammableWalletsSetup
 import CircleLogo from '@salesforce/contentAssetUrl/CircleLogo';
 
 import { encryptData } from './encryption';
+export { encryptData } from './encryption';
 
 export default class ProgrammableWalletsSetup extends LightningElement {
     isLoading = true;
@@ -34,10 +35,19 @@ export default class ProgrammableWalletsSetup extends LightningElement {
         entitySecretCiphertext: this.steps.n5
     };
 
+    stepToValidator = {
+        apiKey: 'String',
+        entitySecret: 'String',
+        entityPublicKey: 'String',
+        entitySecretCiphertext: 'String'
+    };
+
     get activeSections() {
         const sections = Object.keys(this.setupData).map(section => {
-            if (!this.isBlank(this.setupData, section)) {
-                return this.completedSectionToAvailableSteps[section];
+            if (this.stepToValidator[section] === 'String') {
+                if (!this.isBlank(this.setupData, section)) {
+                    return this.completedSectionToAvailableSteps[section];
+                }
             }
         });
 
@@ -58,6 +68,10 @@ export default class ProgrammableWalletsSetup extends LightningElement {
 
     get entitySecretCiphertextCompleted() {
         return !this.isBlank(this.setupData, 'entitySecretCiphertext');
+    }
+
+    get entitySecretCiphertextCopyVisible() {
+        return navigator.clipboard && window.isSecureContext && this.entitySecretCiphertextCompleted;
     }
 
     isBlank(object, value) {
@@ -174,6 +188,11 @@ export default class ProgrammableWalletsSetup extends LightningElement {
         } finally {
             this.isLoading = false;
         }
+    }
+
+    handleCopyEntitySecretCiphertext() {
+        navigator.clipboard.writeText(this.setupData.entitySecretCiphertext);
+        this.showToast(this.labels.CORE.Success, this.labels.ENTITY_SECRET_CIPHERTEXT.Copy, TOAST_VARIANT.SUCCESS, TOAST_MODE.SUCCESS);
     }
 
     async handleRegisterComplete() {
