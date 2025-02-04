@@ -22,6 +22,8 @@ For an explanation of the screen, please view [Milestone 1 Explainer Video](http
 
 Milestone 2 demostrates the creation of Wallet Sets, Wallets of both types, and them showing up on the Circle Console. Milestone 3 was created contemporanously to Milestone 3.
 
+![](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-wallet-sets-with-wallets.jpg)
+
 To utilize the Wallet Sets and Wallets, follow the setup steps below (Milestone 3) to create and register your API key.
 
 1. Setup the APIKey and Cypher Text (Milestone 3).
@@ -36,6 +38,8 @@ To see these features, watch [Milestone 2 during Milestone 2/3 Demo Video](https
 
 This Open Source Project now has custom Lightning Web Components to run the Javascript necessary for registration.
 
+![](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-configuration-data.jpg)
+
 1. Create a Circle Developer Account and Login [Circle Console](https://console.circle.com/)
 2. Check your email to confirm and complete the account.
 3. In Salesforce Programmable Wallet Setup, Start the Configuration Process
@@ -45,7 +49,7 @@ This Open Source Project now has custom Lightning Web Components to run the Java
 
 Note: There is no supported way to copy the Cypher Text except via the NodeJS or Python SDKs. Therefore you must copy and paste it into the console.
 
-[Milestone 2 and 3 Demo Video] (https://youtu.be/4BBZACRtaew)
+[Milestone 2 and 3 Demo Video](https://youtu.be/4BBZACRtaew)
 
 
 
