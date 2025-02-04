@@ -42,10 +42,15 @@ This Open Source Project now has custom Lightning Web Components to run the Java
 
 1. Create a Circle Developer Account and Login [Circle Console](https://console.circle.com/)
 2. Check your email to confirm and complete the account.
-3. In Salesforce Programmable Wallet Setup, Start the Configuration Process
-4. Create an API Key on the [API & Client Keys of the Circle Console](https://console.circle.com/api-keys)
-5. Register the Cypher Text on the [Circle Console Entity Secret Page](https://console.circle.com/wallets/dev/configurator/entity-secret)
-6. Follow the Step by Step Createion Process to generate the Wallets (above)
+3. Grant your user the Permission Set "Programmable Wallets Admin"
+  1. Click the Gear for Setup
+  2. Quick Find "Users"
+  3. Click on your user and scroll down to Permission Sets.
+  4. Edit Assignments, and give yourself the [Programmable Wallets Admin permission](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-permission-set.jpg).
+4. In Salesforce Programmable Wallet Setup, Start the Configuration Process
+5. Create an API Key on the [API & Client Keys of the Circle Console](https://console.circle.com/api-keys)
+6. Register the Cypher Text on the [Circle Console Entity Secret Page](https://console.circle.com/wallets/dev/configurator/entity-secret)
+7. Follow the Step by Step Createion Process to generate the Wallets (above)
 
 Note: There is no supported way to copy the Cypher Text except via the NodeJS or Python SDKs. Therefore you must copy and paste it into the console.
 
