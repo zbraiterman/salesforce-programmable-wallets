@@ -15,6 +15,11 @@ public with sharing class CircleEndpoint {
         return this;
     }
 
+    public CircleEndpoint post() {
+        request.setMethod('POST');
+        return this;
+    }
+
     public CircleEndpoint setEndpoint(String value) {
         request.setEndpoint(String.join(new List<String>{ endpointUrl, apiVersion, endpointFix }, '/') + value);
         return this;

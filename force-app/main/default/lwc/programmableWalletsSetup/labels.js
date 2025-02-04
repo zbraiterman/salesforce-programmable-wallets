@@ -23,6 +23,7 @@ import ProgrammableWalletsSetup_EntityPublicKey_Button from '@salesforce/label/c
 import ProgrammableWalletsSetup_EntitySecretCiphertext_Sub_Header from '@salesforce/label/c.ProgrammableWalletsSetup_EntitySecretCiphertext_Sub_Header';
 import ProgrammableWalletsSetup_EntitySecretCiphertext_Info from '@salesforce/label/c.ProgrammableWalletsSetup_EntitySecretCiphertext_Info';
 import ProgrammableWalletsSetup_EntitySecretCiphertext_Button from '@salesforce/label/c.ProgrammableWalletsSetup_EntitySecretCiphertext_Button';
+import ProgrammableWalletsSetup_EntitySecretCiphertext_Copy from '@salesforce/label/c.ProgrammableWalletsSetup_EntitySecretCiphertext_Copy';
 
 import ProgrammableWalletsSetup_Web3ServicesConsole_Sub_Header from '@salesforce/label/c.ProgrammableWalletsSetup_Web3ServicesConsole_Sub_Header';
 import ProgrammableWalletsSetup_Web3ServicesConsole_Info from '@salesforce/label/c.ProgrammableWalletsSetup_Web3ServicesConsole_Info';
@@ -60,7 +61,8 @@ export const labels = {
     ENTITY_SECRET_CIPHERTEXT: {
         Sub_Header: ProgrammableWalletsSetup_EntitySecretCiphertext_Sub_Header,
         Info: ProgrammableWalletsSetup_EntitySecretCiphertext_Info,
-        Button: ProgrammableWalletsSetup_EntitySecretCiphertext_Button
+        Button: ProgrammableWalletsSetup_EntitySecretCiphertext_Button,
+        Copy: ProgrammableWalletsSetup_EntitySecretCiphertext_Copy
     },
     WEB3_SERVICE_CONSOLE: {
         Sub_Header: ProgrammableWalletsSetup_Web3ServicesConsole_Sub_Header,

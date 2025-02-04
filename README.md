@@ -18,6 +18,37 @@ This Open Source project requires you to register a developer key. This will be 
 
 For an explanation of the screen, please view [Milestone 1 Explainer Video](https://youtu.be/XJlX5Affdg8)
 
+### Milestone 2 - Wallet Sets, Wallets, etc.
+
+Milestone 2 demostrates the creation of Wallet Sets, Wallets of both types, and them showing up on the Circle Console. Milestone 3 was created contemporanously to Milestone 3.
+
+To utilize the Wallet Sets and Wallets, follow the setup steps below (Milestone 3) to create and register your API key.
+
+1. Setup the APIKey and Cypher Text (Milestone 3).
+2. Launch Programmable Wallets for Salesforce in the App Switcher
+3. Create a New Wallet Set (name it, hit create).
+4. Create one or more new Wallets in the Wallet Set.
+5. Verify your Wallet on the [Circle Console Developer Controlled Wallets](https://console.circle.com/wallets/dev/wallets)
+
+To see these features, watch [Milestone 2 during Milestone 2/3 Demo Video](https://youtu.be/4BBZACRtaew?si=BNENamc_rpDT1pKC&t=108)
+
+### Milestone 3 - API Key, Cypher Text Creation and Storage
+
+This Open Source Project now has custom Lightning Web Components to run the Javascript necessary for registration.
+
+1. Create a Circle Developer Account and Login [Circle Console](https://console.circle.com/)
+2. Check your email to confirm and complete the account.
+3. In Salesforce Programmable Wallet Setup, Start the Configuration Process
+4. Create an API Key on the [API & Client Keys of the Circle Console](https://console.circle.com/api-keys)
+5. Register the Cypher Text on the [Circle Console Entity Secret Page](https://console.circle.com/wallets/dev/configurator/entity-secret)
+6. Follow the Step by Step Createion Process to generate the Wallets (above)
+
+Note: There is no supported way to copy the Cypher Text except via the NodeJS or Python SDKs. Therefore you must copy and paste it into the console.
+
+[Milestone 2 and 3 Demo Video] (https://youtu.be/4BBZACRtaew)
+
+
+
 ## Ssalesforce DX Project Setup Information
 
 This is a basic demonstration Salesforce DX Project. Using the
@@ -59,7 +90,7 @@ https://developer.salesforce.com/signup
 
 ## Usage - Milestone 1
 
-1. Assign permission set: `Salesforce Programmable Wallets Admin` to your user
+1. Assign permission set: `Programmable Wallets Admin` to your user
 1. Use App Launcher to open `Programmable Wallets Setup`.
 1. Please perform all the setup steps.
 
