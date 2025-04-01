@@ -58,7 +58,7 @@ Note: There is no supported way to copy the Cypher Text except via the NodeJS or
 
 
 
-## Ssalesforce DX Project Setup Information
+## Salesforce DX Project Setup Information
 
 This is a basic demonstration Salesforce DX Project. Using the
 [SF CLI](https://developer.salesforce.com/tools/sfdxcli) tools, you can deploy
