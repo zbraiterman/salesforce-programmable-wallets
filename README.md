@@ -26,7 +26,7 @@ Milestone 2 demostrates the creation of Wallet Sets, Wallets of both types, and 
 
 To utilize the Wallet Sets and Wallets, follow the setup steps below (Milestone 3) to create and register your API key.
 
-1. Setup the APIKey and Cypher Text (Milestone 3).
+1. Set up the APIKey and Cypher Text (Milestone 3).
 2. Launch Programmable Wallets for Salesforce in the App Switcher
 3. Create a New Wallet Set (name it, hit create).
 4. Create one or more new Wallets in the Wallet Set.
