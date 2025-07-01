@@ -1,0 +1,5 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId">
+    <aura:attribute name="recordId" type="Id" />
+
+    <c:newWalletSet recordId="{!v.recordId}"> </c:newWalletSet>
+</aura:component>
