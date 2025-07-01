@@ -16,41 +16,41 @@ The initial Setup App and Screen is built. It allows you to connect to the Progr
 
 This Open Source project requires you to register a developer key. This will be clarified in Milestone 3 as we prepare for final release. We are able to connect to the developer account. All "scaffolding is done."
 
-For an explanation of the screen, please view [Milestone 1 Explainer Video](https://youtu.be/XJlX5Affdg8)
+For an explanation of the screen, please view [Milestone 1 Explainer Video](https://youtu.be/XJlX5Affdg8).
 
 ### Milestone 2 - Wallet Sets, Wallets, etc.
 
-Milestone 2 demostrates the creation of Wallet Sets, Wallets of both types, and them showing up on the Circle Console. Milestone 3 was created contemporanously to Milestone 3.
+Milestone 2 demostrates the creation of Wallet Sets, Wallets of both types, and them showing up on the Circle Console. Milestone 3 was created contemporanously to Milestone 2.
 
 ![](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-wallet-sets-with-wallets.jpg)
 
 To utilize the Wallet Sets and Wallets, follow the setup steps below (Milestone 3) to create and register your API key.
 
 1. Set up the APIKey and Cypher Text (Milestone 3).
-2. Launch Programmable Wallets for Salesforce in the App Switcher
+2. Launch Programmable Wallets for Salesforce in the App Switcher.
 3. Create a New Wallet Set (name it, hit create).
 4. Create one or more new Wallets in the Wallet Set.
-5. Verify your Wallet on the [Circle Console Developer Controlled Wallets](https://console.circle.com/wallets/dev/wallets)
+5. Verify your Wallet on the [Circle Console Developer Controlled Wallets](https://console.circle.com/wallets/dev/wallets).
 
-To see these features, watch [Milestone 2 during Milestone 2/3 Demo Video](https://youtu.be/4BBZACRtaew?si=BNENamc_rpDT1pKC&t=108)
+To see these features, watch [Milestone 2 during Milestone 2/3 Demo Video](https://youtu.be/4BBZACRtaew?si=BNENamc_rpDT1pKC&t=108).
 
 ### Milestone 3 - API Key, Cypher Text Creation and Storage
 
-This Open Source Project now has custom Lightning Web Components to run the Javascript necessary for registration.
+This Open Source Project now has custom Lightning Web Components to run the JavaScript necessary for registration.
 
 ![](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-configuration-data.jpg)
 
-1. Create a Circle Developer Account and Login [Circle Console](https://console.circle.com/)
+1. Create a Circle Developer Account and Login [Circle Console](https://console.circle.com/).
 2. Check your email to confirm and complete the account.
-3. Grant your user the Permission Set "Programmable Wallets Admin"
-  1. Click the Gear for Setup
-  2. Quick Find "Users"
+3. Grant your user the Permission Set, "Programmable Wallets Admin".
+  1. Click the Gear for Setup.
+  2. Quick Find "Users".
   3. Click on your user and scroll down to Permission Sets.
   4. Edit Assignments, and give yourself the [Programmable Wallets Admin permission](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-permission-set.jpg).
 4. In Salesforce Programmable Wallet Setup, Start the Configuration Process
-5. Create an API Key on the [API & Client Keys of the Circle Console](https://console.circle.com/api-keys)
-6. Register the Cypher Text on the [Circle Console Entity Secret Page](https://console.circle.com/wallets/dev/configurator/entity-secret)
-7. Follow the Step by Step Creation Process to generate the Wallets (above)
+5. Create an API Key on the [API & Client Keys of the Circle Console](https://console.circle.com/api-keys).
+6. Register the Cypher Text on the [Circle Console Entity Secret Page](https://console.circle.com/wallets/dev/configurator/entity-secret).
+7. Follow the Step by Step Creation Process to generate the Wallets (above).
 
 Note: There is no supported way to copy the Cypher Text except via the NodeJS or Python SDKs. Therefore you must copy and paste it into the console.
 
@@ -76,7 +76,8 @@ https://developer.salesforce.com/signup
 
 ## How To Test the App - Using Repository
 
-1. Clone the repository.
+1. Clone the repository. `git clone https://github.com/MuKnSys/salesforce-programmable-wallets.git`
+1. Change directory to the cloned repository. `cd salesforce-programmable-wallets`
 1. Checkout the main branch.
 1. Log into the Dev Hub Org by running
    `sf org login web --set-default-dev-hub --alias DevHub --instance-url https://login.salesforce.com`
@@ -94,8 +95,8 @@ https://developer.salesforce.com/signup
    - Use the `-h` flag for help.
    - For more details:
      [developer docs scratch orgs create](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs_create.htm).
-1. Push the code to the Scratch Org: `sf project deploy start`
-1. Connect to the Salesforce Scratch Org: `sf org open`
+1. Push the code to the Scratch Org: `sf project deploy start`.
+1. Connect to the Salesforce Scratch Org: `sf org open`.
 
 ## Usage - Milestone 1
 
@@ -105,10 +106,10 @@ https://developer.salesforce.com/signup
 
 ## Submitting changes to GitHub
 
-1. Create a feature / change branch - you will need to fork the project
-1. Pull changes from Salesforce `sf project retrieve start`
-1. Push changes to GitHub
-1. Create a pull request
+1. Create a feature / change branch - you will need to fork the project.
+1. Pull changes from Salesforce `sf project retrieve start`.
+1. Push changes to GitHub.
+1. Create a pull request.
 
 
 ## Copyright and License
