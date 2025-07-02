@@ -8,7 +8,6 @@ Key management is abstracted as Developer Managed Wallets, using Salesforce perm
 
 ## Installation Instructions / How to Test the App
 
-1. Install the [Salesforce command line interface (CLI)](https://developer.salesforce.com/tools/salesforcecli).
 1. Clone the repository. `git clone https://github.com/MuKnSys/salesforce-programmable-wallets.git`
 1. Change directory to the cloned repository. `cd salesforce-programmable-wallets`
 1. Checkout the main branch.
@@ -105,8 +104,6 @@ You can get a free Salesforce Developer Edition account from Salesforce. Sign up
 at:
 
 https://developer.salesforce.com/signup
-
-## How To Test the App - Using Repository
 
 
 ## Submitting changes to GitHub
