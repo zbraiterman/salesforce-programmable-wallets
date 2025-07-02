@@ -10,7 +10,7 @@ Key management is abstracted as Developer Managed Wallets, using Salesforce perm
 
 ### Milestone 1 - Project Setup
 
-The initial Setup App and Screen is built. It allows you to connect to the Programmable wallet system.
+The initial Setup App and Screen is built. It allows you to connect to the Programmable Wallet system.
 
 ![](https://github.com/MuKnSys/web3-wallet-for-salesforce/blob/main/documentation-and-images/screenshot-setup.png)
 
